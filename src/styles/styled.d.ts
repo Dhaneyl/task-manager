@@ -7,10 +7,28 @@ declare module 'styled-components' {
       surface: string;
       primary: string;
       secondary: string;
-      gray100: string;
-      gray300: string;
-      gray500: string;
-      gray900: string;
+      gray: {
+        100: string;
+        300: string;
+        500: string;
+        900: string;
+      };
+      green: {
+        100: string;
+        700: string;
+      };
+      blue: {
+        100: string;
+        700: string;
+      };
+      red: {
+        100: string;
+        700: string;
+      };
+      yellow: {
+        100: string;
+        700: string;
+      };
     };
     fonts: {
       primary: string;

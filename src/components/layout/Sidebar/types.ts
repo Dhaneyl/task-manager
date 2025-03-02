@@ -9,3 +9,9 @@ import React from "react";
     email: string;
     image?: string;
    }
+
+   export interface LogoutButtonProps {
+    children: React.ReactNode;
+    onClick: () => void;
+  }
+  

@@ -12,10 +12,13 @@
     "includedScripts": []
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.3.0",
+    "date-fns": "^4.1.0",
     "lucide-react": "^0.474.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-is": "19.0.0",
+    "react-router-dom": "^7.1.5",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {

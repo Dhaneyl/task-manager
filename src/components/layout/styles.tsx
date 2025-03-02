@@ -10,16 +10,13 @@ export const LayoutWrapper = styled.div`
  min-height: 100vh;
 `;
 
-export const SidebarArea = styled.div`
- grid-area: sidebar;
-`;
-
-export const HeaderArea = styled.div`
- grid-area: header;
-`;
-
 export const ContentArea = styled.main`
  grid-area: content;
  padding: 2rem;
  background: ${props => props.theme.colors.background};
 `;
+
+export const WelcomeMessage = styled.h1`
+font-weight:300;
+margin-bottom:16px;
+`

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { NavItemProps } from './types';
 import { NavLink } from 'react-router-dom';
+import { LogoutButtonProps } from './types';
 
 export const SidebarWrapper = styled.aside`
   background: ${props => props.theme.colors.primary};
@@ -9,6 +9,7 @@ export const SidebarWrapper = styled.aside`
   padding: 2rem;
   display: flex;
   flex-direction: column;
+   grid-area: sidebar;
 `;
 
 export const UserProfile = styled.div`
@@ -50,4 +51,18 @@ export const NavItem = styled(NavLink)`
   border-radius: 0.5rem;
   }
  
+`;
+export const LogoutButton = styled.div<LogoutButtonProps>`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  color: white;
+  cursor: pointer;
+  margin-top: auto;
+  
+  &:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 0.375rem;
+  }
 `;

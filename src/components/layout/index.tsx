@@ -1,10 +1,12 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
 import { Header } from './Header';
-import { LayoutWrapper, SidebarArea, HeaderArea, ContentArea } from './styles';
+import { LayoutWrapper, ContentArea, WelcomeMessage } from './styles';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export const Layout = () => {
  const location = useLocation();
+ const {user} = useAuth0()
  const getPageTitle = () => {
    switch(location.pathname) {
      case '/': return 'Dashboard';
@@ -16,13 +18,10 @@ export const Layout = () => {
 
  return (
    <LayoutWrapper>
-     <SidebarArea>
        <Sidebar />
-     </SidebarArea>
-     <HeaderArea>
        <Header title={getPageTitle()} />
-     </HeaderArea>
      <ContentArea>
+      <WelcomeMessage>Welcome back, {user?.name}👋</WelcomeMessage>
        <Outlet />
      </ContentArea>
    </LayoutWrapper>
